@@ -1,7 +1,7 @@
 import React from 'react';
 import AddUserForm from './AddUserForm';
 import EditUserForm from './EditUserForm';
-import UserList from './UserList';
+import SortedUserList from '../containers/SortedUserList';
 import { generateRandomId } from 'util';
 //import './App.css';
 
@@ -81,7 +81,7 @@ class App extends React.Component{
                         <EditUserForm users={this.state.users} handleSubmit={this.editUser}/>
                     </div>
                     <div className="col-md-3">
-                        <UserList users={this.state.users}/>
+                        <SortedUserList/>
                     </div>
                 </div>
             </div>

@@ -20,7 +20,7 @@ const default_users = [
         "id": "5aedbd90352ea61f53ed330b",
         "first_name": "Leonora",
         "last_name": "Jenne",
-        "email": "ljenne1@google.co.jp",
+        "email": "ljenne11@google.co.jp",
         "gender": "Female"
     }
 ]
