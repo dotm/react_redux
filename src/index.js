@@ -24,7 +24,10 @@ const default_users = [
         "gender": "Female"
     }
 ]
-const store = createStore(allReducer, {users: default_users})
+const default_state = {
+    users: default_users
+}
+const store = createStore(allReducer, default_state)
 
 ReactDOM.render(
     <Provider store={store}>
