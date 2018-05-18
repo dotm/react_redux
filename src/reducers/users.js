@@ -1,20 +1,4 @@
-const default_users = [
-    {
-        "id": "5aedbd8692b696a8f35e890d",
-        "first_name": "Miller",
-        "last_name": "Amyes",
-        "email": "mamyes0@posterous.com",
-        "gender": "Male"
-    }, {
-        "id": "5aedbd90352ea61f53ed330b",
-        "first_name": "Leonora",
-        "last_name": "Jenne",
-        "email": "ljenne1@google.co.jp",
-        "gender": "Female"
-    }
-]
-
-const users = (state = default_users, action) => {
+const users = (state = [], action) => {
     switch (action.type) {
         case 'ADD_USER':
             return [
