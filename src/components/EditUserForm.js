@@ -23,7 +23,12 @@ export default class EditUserForm extends React.Component{
     select_editedUser(event){
         let user_id = event.target.value
         
-        let editedUser = this.props.users.find(user => user.id === user_id)
+        let editedUser
+        if(user_id){
+            editedUser = this.props.users.find(user => user.id === user_id)
+        }else{
+            editedUser = this.get_initialState()
+        }
         
         this.setState({
             id: user_id,
