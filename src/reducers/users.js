@@ -1,8 +1,8 @@
-const users = (state = [], action) => {
+const users = (users_state = [], action) => {
     switch (action.type) {
         case 'ADD_USER':
             return [
-                ...state,
+                ...users_state,
                 {
                     id: action.payload.id,
                     first_name: action.payload.first_name,
@@ -11,7 +11,7 @@ const users = (state = [], action) => {
                 }
             ]
         case 'EDIT_USER':
-            return state.map(user => {
+            return users_state.map(user => {
                 if (user.id === action.payload.id){
                     return {
                         id: action.payload.id,
@@ -24,7 +24,7 @@ const users = (state = [], action) => {
                 }
             })
         default:
-            return state
+            return users_state
     }
 }
 
