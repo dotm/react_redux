@@ -12,12 +12,12 @@ const users = (state = [], action) => {
             ]
         case 'EDIT_USER':
             return state.map(user => {
-                if (user.id === action.id){
+                if (user.id === action.payload.id){
                     return {
-                        id: action.id,
-                        first_name: action.first_name,
-                        last_name: action.last_name,
-                        email: action.email,
+                        id: action.payload.id,
+                        first_name: action.payload.first_name,
+                        last_name: action.payload.last_name,
+                        email: action.payload.email,
                     }
                 } else {
                     return user
