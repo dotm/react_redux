@@ -1,5 +1,5 @@
 import React from 'react';
-import AddUserForm from './AddUserForm';
+import AddUserForm_Container from '../containers/AddUserForm_Container';
 import EditUserForm from './EditUserForm';
 import SortedUserList from '../containers/SortedUserList';
 import { generateRandomId } from 'util';
@@ -75,7 +75,7 @@ class App extends React.Component{
             <div className="container">
                 <div className="row">
                     <div className="col-md-3">
-                        <AddUserForm handleSubmit={this.addUser}/>
+                        <AddUserForm_Container/>
                     </div>
                     <div className="col-md-3">
                         <EditUserForm users={this.state.users} handleSubmit={this.editUser}/>

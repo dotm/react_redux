@@ -4,10 +4,10 @@ const users = (state = [], action) => {
             return [
                 ...state,
                 {
-                    id: action.id,
-                    first_name: action.first_name,
-                    last_name: action.last_name,
-                    email: action.email,
+                    id: action.payload.id,
+                    first_name: action.payload.first_name,
+                    last_name: action.payload.last_name,
+                    email: action.payload.email,
                 }
             ]
         case 'EDIT_USER':
